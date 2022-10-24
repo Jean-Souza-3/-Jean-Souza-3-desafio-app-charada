@@ -1,27 +1,83 @@
-#container {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+ion-toolbar {
+    --background: #00bbf98a;
+    font-family: 'Inknut Antiqua', serif;
+    color: #ffffff;
+
+    ion-title {
+        font-size: x-large;
+    }
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-content {
+    --background: linear-gradient(to bottom, #00bbf998, #9a5de5d8);
+    --padding-start: 32px;
+    --padding-top: 150px;
+    --padding-end: 32px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.pergunta {
+    color: #ffffff;
+    font-size: x-large;
+    font-family: 'Inknut Antiqua', serif;
 }
 
-#container a {
-  text-decoration: none;
+.timer {
+    color: #ffffff;
+    font-size: xx-large;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+.esconder {
+    opacity: 0;
+}
+
+#question1 {
+    width: 60px;
+    height: 60px;
+    animation: slide 10000ms infinite;
+}
+
+#question2 {
+    width: 60px;
+    height: 60px;
+    animation: slide 10000ms infinite;
+}
+
+.fundo{
+    filter: invert(52%) 
+    sepia(31%) 
+    saturate(3036%) 
+    hue-rotate(294deg) 
+    brightness(99%) 
+    contrast(90%);
+}
+
+@keyframes slide {
+    0% {
+        transform: rotate(-30deg);
+    }
+
+    33% {
+        transform: rotate(15deg);
+    }
+
+    66% {
+        transform: rotate(-75deg);
+    }
+
+    100% {
+        transform: rotate(-30deg);
+    }
+}
+
+#main {
+    background-color: #cccccc58;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
